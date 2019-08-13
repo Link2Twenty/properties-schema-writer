@@ -91,8 +91,9 @@ function handleProperties(prop, title) {
   trHelp.appendChild(tdHelpInput);
   tbody.appendChild(trHelp);
 
-  if (prop.type == "array") {
-    var keys = Object.keys(prop.items.properties);
+  if (prop.type == "array" || prop.type == "object") {
+    var newKey = prop.items ? prop.items.properties : prop.properties;
+    var keys = Object.keys(newKey);
     for (var i = 0; i < keys.length; i++) {
       var trSub = document.createElement('tr');
       var tdSub = document.createElement('td');
@@ -101,7 +102,7 @@ function handleProperties(prop, title) {
       var tableSub = document.createElement('table');
       tableSub.classList.add('sub-table');
       tableSub.setAttribute('cellspacing', 0)
-      var sub = handleProperties(prop.items.properties[keys[i]], title + "." + keys[i]);
+      var sub = handleProperties(newKey[keys[i]], title + "." + keys[i]);
       tableSub.appendChild(sub);
       tdSub.appendChild(tableSub);
       trSub.appendChild(tdSub);
@@ -135,7 +136,7 @@ function generateNewSchema(data) {
     var layers = inputs[i].dataset.prop.split('.');
 
     for (var j = 0; j < layers.length; j ++) {
-      if (j > 0) level = level.items.properties;
+      if (j > 0) level = level.items ? level.items.properties : level.properties;
       level = level[layers[j]]
     };
 
