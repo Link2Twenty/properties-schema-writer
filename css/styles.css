@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  background: rgb(107, 180, 206);
+  font-family: "Open Sans";
+}
+
+div.form {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #2aa3ce;
+  font-size: 0;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+div.form input.url {
+  width: 600px;
+  font-size: 20px;
+  padding: 11px 20px;
+  margin: 5px;
+  border-radius: 4px 0 0 4px;
+  margin-right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #efefef;
+  border: none;
+  outline: none;
+}
+
+div.form input.url::placeholder {
+  color: #efefef;
+  opacity: 0.8;
+}
+
+div.form button.get-data {
+  padding: 11px 20px;
+  font-size: 20px;
+  margin: 5px;
+  border-radius: 0 4px 4px 0;
+  margin-left: 0;
+  background-color: #00ce8b;
+  color: #efefef;
+  border: none;
+  outline: none;
+}
+
+main.content {
+  margin-top: 100px;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+main.content div.warning {
+  display: inline-block;
+  padding: 11px 20px;
+  background-color: #FFB300;
+  border-radius: 4px;
+  color: white;
+}
+
+main.content table {
+  text-align: left;
+  margin: 0 auto;
+  border-bottom: 1px solid #00aa71;
+}
+
+main.content table.sub-table {
+  text-align: left;
+  margin: 0;
+  border-bottom: none;
+  width: 100%;
+}
+
+main.content table tr {
+  color: #353535
+}
+
+main.content table tr th[colspan] {
+  background-color: #00ce8b;
+  color: white;
+  padding: 11px 20px;
+  border: 1px solid #00aa71;
+}
+
+main.content table tr:nth-child(odd) {
+  background-color: rgba(170, 150, 200, 0.4)
+}
+
+main.content table tr:nth-child(even) {
+  background-color: rgba(200, 150, 170, 0.1)
+}
+
+main.content table tr th {
+  border-left: 1px solid #00aa71;
+  padding: 11px 20px;
+}
+
+main.content table tr td {
+  padding: 11px 20px;
+}
+
+main.content table tr td.sub {
+  padding: 0 0 0 20px;
+}
+
+main.content table tr td:last-child {
+  border-right: 1px solid #00aa71;
+}
+
+main.content table tr td input {
+  width: 400px;
+}
+
+main.content table.sub-table tr th {
+  box-sizing: border-box;
+  width: 75px;
+}
+
+main.content table.sub-table tr td:last-child {
+  box-sizing: border-box;
+  width: 445px;
+}
+
+main.content button.submit {
+  padding: 11px 20px;
+  font-size: 20px;
+  margin: 15px;
+  border-radius: 4px;
+  background-color: #00ce8b;
+  color: #efefef;
+  border: none;
+  cursor: pointer;
+}
